@@ -1,0 +1,41 @@
+<!-- HEADER (masukkan di semua halaman utama/suball) -->
+<header>
+    <div class="navbar">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="user-profile" id="userProfile">
+            <span><?= htmlspecialchars($username??"User") ?></span>
+            <img src="/profile.jpg" alt="User Profile" class="profile-picture">
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <img src="/profile.jpg" alt="Profile Picture">
+            <div class="profile-name"><?= htmlspecialchars($username??"User") ?></div>
+            <div class="profile-email"><?= htmlspecialchars($email??"email@example.com") ?></div>
+            <ul>
+                <li><a href="account.php">Account</a></li>
+                <li><a href="edit_profile.php">Edit Profile</a></li>
+                <li><a href="settings.php">Settings</a></li>
+                <li><a href="help_support.php">Help & Support</a></li>
+            </ul>
+            <button class="logout-button" id="logoutButton">Log out</button>
+        </div>
+    </div>
+</header>
+<!-- SIDEBAR -->
+<div class="sidebar translucent fade-in" id="sidebar">
+    <div class="close-menu" id="closeMenu">&times;</div>
+    <ul>
+        <li class="nav-item"><a href="home.php">Home</a></li>
+        <li class="nav-item has-submenu" id="allNav">
+            <div id="allToggle">All ▼</div>
+            <ul class="submenu" id="submenu">
+                <li class="submenu-item"><a href="menu.php">Menu</a></li>
+                <li class="submenu-item"><a href="pemesanan.php">Pemesanan</a></li>
+                <li class="submenu-item"><a href="contact.php">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+    <button class="login-button"><a href="login_admin.php">Login for admin</a></button>
+</div>
+<script src="js/universal.js"></script>
